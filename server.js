@@ -57,12 +57,10 @@ app.get("/scrape", function(req, res) {
         .then(function(dbArticle) {
           // View the added result in the console
           console.log(dbArticle);
-          console.log("something worked")
         })
         .catch(function(err) {
           // If an error occurred, log it
           console.log(err);
-          console.log("nothing worked")
         });
     });
 

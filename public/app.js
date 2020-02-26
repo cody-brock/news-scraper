@@ -9,13 +9,9 @@ $.getJSON("/articles", function(data) {
 });
 
 $(document).on("click", "#scrape-it", function() {
-  $.ajax({
-    method: "GET",
-    URL: "/scrape"
-  }).then(function(data) {
-    console.log("it worked!")
+  $.get("/scrape", function(data) {
     console.log(data);
-  })
+  }).then(location.reload());
 })
 
 
